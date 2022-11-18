@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Sono;
+    src: url(./fonts/Sono-Regular.ttf);
+}
+
+@font-face {
+    font-family: Sono;
+    src: url(./fonts/Sono-Bold.ttf);
+}
+
+@font-face {
+    font-family: Sono;
+    src: url(./fonts/Sono-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: Sono;
+    src: url(./fonts/Sono-Light.ttf);
+}
+
+@font-face {
+    font-family: Sono;
+    src: url(./fonts/Sono-Medium.ttf);
+}
+
+@font-face {
+    font-family: Sono;
+    src: url(./fonts/Sono-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Sono;
+    src: url(./fonts/Sono-ExtraLight.ttf);
+}
+
+body {
+    background-color: #262626;
+}
