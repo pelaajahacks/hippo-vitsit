@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+    
 </script>
 
 <template>
@@ -14,12 +14,37 @@
 </template>
 
 <script lang="ts">
+import axios from 'axios'
 export default {
   name: 'Vitsi',
+  methods: {
+    getHippoVitsi() {
+        axios.get('https://api.segso.net/hippo-vitsi')
+            .then(response => {
+                // handle success
+                if(this.hippoVitsi != response.data) {
+                    this.hippoVitsi = response.data
+                }
+                else {
+                    this.getHippoVitsi()
+                }
+                return "Success"
+            })
+            .catch(error => {
+                // handle error
+                return "Error"
+            })
+    },
+  },
   data() {
+    
     return {
-        hippoVitsi: "Mitä hippo osti kaupasta? 4gb muistitikun ja munkin"
+        hippoVitsi: null
     }
+  },
+  mounted() {
+    this.getHippoVitsi()
+    setInterval(() => this.getHippoVitsi(), 10000)
   }
 };
 </script>
